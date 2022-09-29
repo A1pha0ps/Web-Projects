@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'frauncesblack_italic';
+    src: url('./fonts/fraunces-italic-variablefont_softwonkopszwght-webfont.woff2') format('woff2'),
+        url('./fonts/fraunces-italic-variablefont_softwonkopszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frauncesblack';
+    src: url('./fonts/fraunces-variablefont_softwonkopszwght-webfont.woff2') format('woff2'),
+        url('./fonts/fraunces-variablefont_softwonkopszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratthin';
+    src: url('./fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+        url('./fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratthin_italic';
+    src: url('./fonts/montserrat-italic-variablefont_wght-webfont.woff2') format('woff2'),
+        url('./fonts/montserrat-italic-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+div.main-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+div.card-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.image-container {
+    width: 40%;
+}
+
+div.text-container {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 40%;
+    background-color: hsl(0, 0%, 100%);
+}
+
+img:not(.cart) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.text-sub-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+div.price-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 12%;
+}
+
+h1 {
+    font-family: 'frauncesblack';
+    margin: 0;
+    font-weight: 500;
+}
+
+div.price-container h1 {
+    color: hsl(158, 36%, 37%);
+}
+
+p#item {
+    font-family: 'montserratthin';
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+p#desc {
+    font-family: 'montserratthin';
+    font-weight: 500;
+    font-size: 14px;
+}
+
+span#old {
+    text-decoration: line-through;
+}
+
+button {
+    margin-top: 12%;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-radius: 10px;
+}
+
+h1#name {
+    letter-spacing: -0.5px;
+}
+
+button p {
+    font-family: 'montserratthin';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+img.img_pc {
+    display: block;
+}
+
+img.img_mobile {
+    display: none;
+}
+
+img.cart {
+    padding-right: 5%;
+}
+
+@media (max-width: 375px) {
+    div.card-preview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: initial;
+        width: 100%;
+        top: initial;
+        left: initial;
+        transform: initial;
+    }
+
+    div.main-container {
+        transform: scale(0.9);
+    }
+
+    div.image-container {
+        width: 100%;
+    }
+
+    div.text-container {
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    img.img_pc {
+        display: none;
+    }
+
+    img.img_mobile {
+        display: block;
+    }
+
+    button {
+        margin-top: 6%;
+    }
+
+    img {
+        border-radius: 10px 10px 0px 0px;
+    }
+}
